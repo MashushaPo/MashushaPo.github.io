@@ -1,0 +1,42 @@
+html, body {
+	font-family: 'Roboto Slab', serif;
+	margin: 0;
+}
+
+div {
+	width: 900px;
+	height: auto;
+	background-color: #c2b0c966;
+	margin: auto;
+	padding: 10px 60px;
+	font-size: 20px;
+	box-shadow: 0px 0px 10px 3px #00000055;
+
+}
+h3 {
+	margin: 0;
+	font-size: 30px;
+	padding-top: 20px;
+
+}
+img {
+	width: 70%;
+	height: auto;
+	margin: auto;
+	display: block;
+	box-shadow: 0px 0px 10px 3px #00000055;
+
+}
+a {
+	color: black;
+	text-decoration: none;
+	background-color: #c2b0c9;
+	padding: 2px;
+}
+.back {
+	display: block;
+	margin: 40px auto 0px;
+	width: 250px;
+	padding: 4px 30px;
+
+}
