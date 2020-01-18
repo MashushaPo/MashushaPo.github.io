@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Animation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="media.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Hepta+Slab:300,500,600,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<nav class="top-nav">
+			<a href="#gallery" class="link animated fadeIn">Gallery</a>
+			<a href="#cards" class="link animated fadeIn">Cards</a>
+			<a href="#contacts" class="link animated fadeIn">Contacts</a>
+		</nav>
+	</div>
+
+	<header class="header">
+		<h1 class="header-title animated zoomIn">Make a herbarium</h1>
+	</header>
+
+	<div class="box" id="gallery">
+		<h2 class="box-title">Gallery</h2>
+
+		<div class="images">
+			<div class="image small">
+				<img src="img/img1.jpeg" alt="" style="width: 150%">
+		</div>
+			<div class="image small">
+				<img src="img/img2.jpeg" alt="">
+		</div>
+			<div class="image small">
+				<img src="img/img4.jpeg" alt="" style="width: 150%">
+		</div>
+
+			<div class="image big">
+				<img src="img/img5.jpeg" alt="">
+		</div>
+			<div class="image big">
+				<img src="img/img13.jpeg" alt="">
+		</div>
+
+			<div class="image small">
+				<img src="img/img7.jpeg" alt="">
+		</div>
+			<div class="image small">
+				<img src="img/img8.jpeg" alt="" style="width: 150%">
+		</div>
+			<div class="image small">
+				<img src="img/img6.jpeg" alt="">
+		</div>
+		</div>
+	</div>
+
+	<div class="header" style="height: 350px;"></div>
+
+	<div class="box" id="cards">
+		<h2 class="box-title">Cards</h2>
+		<div class="images">
+			<div class="card">
+				<img src="img/img1.jpeg" alt="" class="card-img">
+				<h3 class="card-title">First card</h3>
+				<p class="card-text">Some interesting text</p>
+			</div>
+
+			<div class="card">
+				<img src="img/img2.jpeg" alt="" class="card-img">
+				<h3 class="card-title">Second card</h3>
+				<p class="card-text">Some interesting text</p>
+			</div>
+
+			<div class="card">
+				<img src="img/img3.jpeg" alt="" class="card-img">
+				<h3 class="card-title">Third card</h3>
+				<p class="card-text">Some interesting text</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="header" style="height: 350px;"></div>
+
+	<div class="box" id="contacts">
+		<div class="box1">
+			<h3 class="box-title ">Contact info:</h3>
+			<p class="box-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+			<p class="box-text" style="line-height: 30px;">
+				<span class="box1-title">Addres:</span> Moscow <br>
+				
+				<span class="box1-title">Phone:</span> +8 999 999 9999<br>
+				<span class="box1-title">Email:</span> ktl@gmail.com
+			</p>
+		</div>
+		<div class="box2">
+
+			<form action="https://getsimpleform.com/messages?form_api_token=10c07d217052d4e00c2d573b074306ec" method="post">
+
+				<input type='hidden' name='redirect_to' value='https://katyalo.github.io/bigSite/#contacts' />
+
+				<input type="text" id="name" name="name" placeholder="Your Name">
+				<input type="email" id="email" name="email" placeholder="Your Email">
+				<textarea id="comment" name="message" placeholder="Your Comment" rows="7"></textarea>
+				<input id="button" type="submit" value="SEND MESSAGE">
+			</form>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$('.link').on('click', function() {
+				var el = $(this).attr('href');
+				$('html, body').animate({scrollTop: $(el).offset().top}, 500);
+				return false;
+			})
+		})
+	</script>
+</body>
+</html>
