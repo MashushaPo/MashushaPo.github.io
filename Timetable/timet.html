@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<title>Timetable</title>
+	<style>
+		body {
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			display: grid;
+			grid-template-rows: 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr 0.2fr 1fr;
+			grid-template-columns: 0.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+			grid-template-areas: "weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work"
+					"weekday time time time time time time time"
+					"weekday work work work work work work work";
+
+		}
+		.item {
+			padding: 5px;
+			border: 1px solid black;
+			font-size: 20px;
+			display: flex;
+			justify-content: center;
+			font-family: 'Source Sans Pro', sans-serif;
+		}
+		.time {
+			font-size: 17px;
+			
+		}
+		.weekday {
+
+		}
+		.work {
+
+		}
+
+
+		@media (max-width: 813px) {
+			body {
+				/*grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;*/
+				width: 1000px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="item  time"></div>
+	<div class="item  time">8:30-13:25</div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Mon</div>
+	<div class="item work">Study</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Tue</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Wed</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Thu</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Fri</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Sat</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item  time"></div>
+	<div class="item weekday">Sun</div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+	<div class="item work"></div>
+
+	
+</body>
+</html>
