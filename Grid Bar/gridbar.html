@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Side Bar</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="media.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="box">
+
+	<div class="header">
+		<div class="arr">
+			<img id="img" src="next.png" alt="">
+		</div>
+
+		<h1 class="title">
+			Pumpkin
+		</h1>
+	</div>
+	<div class="main">
+		<a href="#" class="item" style="background-image: url(p1.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p2.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p3.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p4.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p5.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p6.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p7.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p8.jpg);"></a>
+		<a href="#" class="item" style="background-image: url(p9.jpg);"></a>
+
+		<div class="cont disnone">
+			<div class="close">x</div>
+			<div class="wind"></div>
+		</div>
+	</div>
+	<div class="sidebar">
+		<a href="#" class="link">Menu</a>
+		<a href="#" class="link">Order</a>
+		<a href="#" class="link">Delivery</a>
+		<a href="#" class="link">Contacts</a>
+	</div>
+	<div class="footer">
+		<div class="up">
+			<a class="logo">
+				<img src="Pumpkin.png" alt="">
+			</a>
+			<div class="soc">
+				<a href=""><img src="facebook.png" alt=""></a>
+				<a href=""><img src="vk.png" alt=""></a>
+				<a href=""><img src="instagram.png" alt=""></a>
+				<a href=""><img src="whatsapp.png" alt=""></a>
+			</div>
+		</div>	
+
+
+		<div class="col">
+			<span>Cities</span>
+			<a href="#" class="text">Moscow</a>
+			<a href="#" class="text">St. Peterburg</a>
+			<a href="#" class="text">London</a>
+			<a href="#" class="text">Los Angeles</a>
+			<a href="#" class="text">Tokio</a>
+			<a href="#" class="text">Rome</a>
+		</div>
+
+		<div class="col">
+			<span>Dishes</span>
+			<a href="#" class="text">Burgers</a>
+			<a href="#" class="text">French fries</a>
+			<a href="#" class="text">Rolls</a>
+			<a href="#" class="text">Nuggets</a>
+			<a href="#" class="text">Coffee</a>
+			<a href="#" class="text">Coke</a>
+		</div>
+
+		<div class="col">
+			<span>Other</span>
+			<a href="#" class="text">Contacts</a>
+			<a href="#" class="text">Delivery</a>
+			<a href="#" class="text">Feedback</a>
+			<a href="#" class="text">Branches</a>
+			<a href="#" class="text">Become a courier</a>
+			<a href="#" class="text">Become a meneger</a>
+		</div>	
+
+	</div>
+
+</div>
+
+<script>
+	const items = document.querySelectorAll(".item");
+	const cont = document.querySelector(".cont");
+	const wind = document.querySelector(".wind");
+	const close = document.querySelector(".close");
+
+
+
+	const sidebar = document.querySelector(".sidebar");
+	const arrow = document.querySelector(".arr");
+	const image = document.querySelector("#img");
+
+	for (let i = 0; i < 9; i++) {
+		items[i].addEventListener("click", ()=> {
+			cont.classList.remove("disnone")
+			wind.style.backgroundImage = items[i].style.backgroundImage;
+		}) 
+	}
+	close.addEventListener("click", ()=> {
+		cont.classList.add("disnone");
+	})
+
+	cont.addEventListener("click", ()=> {
+		if (event.target!=wind) {
+			cont.classList.add("disnone");
+		}
+	})
+
+	window.addEventListener("scroll", ()=> {
+		cont.style.top = window.pageYOffset + "px";
+	})
+
+
+
+	
+	change_menu()
+
+	window.onresize = change_menu;
+    function change_menu() {
+        	if (document.body.clientWidth<520) {
+			sidebar.classList.add("disnone");
+		}
+			if (document.body.clientWidth>=520) {
+			sidebar.classList.remove("disnone");
+			sidebar.classList.remove("window");
+			
+		}
+	}
+
+	arrow.addEventListener("click", ()=> {
+		if (image.getAttribute("scr" )=="next.png") {
+			sidebar.classList.remove("disnone");
+			sidebar.classList.add("window");
+			image.setAttribute("src", "close.png");
+		}
+		else {
+			sidebar.classList.add("disnone");
+			sidebar.classList.remove("window");
+			image.setAttribute("src", "next.png");
+		}
+	})
+	
+	window.addEventListener("scroll", ()=> {
+		sidebar.style.top = window.pageYOffset + 100 + "px";
+	})
+	
+
+</script>
+
+
+
+	
+</body>
+</html>
